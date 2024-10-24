@@ -19,3 +19,22 @@ body{
 .container-1 #para1{
     padding-bottom: 10px;
 }
+
+.botao{
+    background-color: #344e41;
+    color: #dad7cd;
+    font-size: large;
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+    border: solid #344e41;
+}
+:hover.botao{
+    color: #344e41;
+    background-color: #dad7cd;
+    border: solid #344e41;
+    
+}
+#botao-meio{
+    text-align: center;
+}
