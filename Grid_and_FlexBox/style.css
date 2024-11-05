@@ -19,6 +19,7 @@ a{
 h1{
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 10px;
 }
 
 img{
@@ -62,4 +63,36 @@ img{
 .flex > div{
     flex: 1 1 200px;
     margin: 10px;
+}
+/* Grid 1 */
+
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 780px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid1 > div:nth-child(n + 4){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.grid1 > div.anuncio{
+    grid-column: 1;
+    grid-row: 2/5;
+    display: block;
+}
+
+@media(max-width:600px){
+    .grid1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid1 > div:nth-child(n + 4){
+        display: block;
+    }
 }
