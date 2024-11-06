@@ -1,0 +1,39 @@
+body{
+    background-color: #083344;
+}
+
+
+.container{
+    background-color: #ec4899;
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+    /* flex-wrap: wrap; */
+    gap: 10px; 
+    /* realiza o espaçamento dos elementos filhos separando 10px para linha (horizontal entre eles) e coluna (vertical entre eles) */
+    /* row-gap: 10px;
+    column-gap: 30px; */
+    /* justify-content: start; */
+    /* align-items: center; */
+}
+
+.item{
+    width: 100px;
+    height: 25px;
+    background-color: #38bdf8;
+}
+
+.item-3{
+    /* Define a quantidade de espaço que os elementos dentro do container devem 
+    ocupar */
+    /* flex: 2 2 30px; */
+
+    /* align-self: flex-end; */
+    order: 2;
+} 
+
+
+.item-6{
+    order: -1;
+}
