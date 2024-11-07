@@ -4,10 +4,11 @@ body{
 
 
 .container{
+    /* margin: 0 10px; */
     background-color: #ec4899;
     display: flex;
     height: 600px;
-    flex-direction: column;
+    flex-direction: row;
     /* flex-flow: column wrap; */
     /* flex-wrap: wrap; */
     gap: 10px; 
@@ -17,17 +18,16 @@ body{
     /* justify-content: start; */
     /* align-items: center; */
 }
-
 .item{
-    width: 100px;
-    height: 25px;
+    width: 200px;
+    height: 255px;
     background-color: #38bdf8;
 }
 
 .item-3{
     /* Define a quantidade de espaço que os elementos dentro do container devem 
     ocupar */
-    /* flex: 2 2 30px; */
+    /* flex-basis: 1100p;+ */
 
     /* align-self: flex-end; */
     order: 2;
@@ -36,4 +36,23 @@ body{
 
 .item-6{
     order: -1;
+}
+
+
+.item-1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item-1 img{
+    width: 70%;
+}
+.item-1 h2{
+    font-size: 20px;
+}
+.item-1 p{
+    text-align: center;
+    width: 100px;
 }
