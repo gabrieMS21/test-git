@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-weight: normal;
+  box-sizing: border-box
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rationale&family=Roboto&display=swap");
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* definindo o container principal que irá abrigar os containers da esquerda e da direita. */
+.main-login {
+  /* estruturando tamanho e altura maximo do monitor atráves de width e heigth 100 vh  e vw  */
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #201b2c;
+  /* definindo como os containers dentro do container pai *main - login* irão se comportar  */
+  display: flex;
+  /* alinhando verticalmente e horizontalmente os containers */
+  justify-content: center;
+  align-items: center;
+}
+/* esquerda */
+.left-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-login h1 {
+  font-size: 3vw;
+  color: #77ffc0;
+}
+
+.left-login-image {
+  width: 35vw;
+}
+
+/* fim esquerda */
+
+/* direita */
+/* container pai */
+.rigth-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  /* definindo a largura para 60% pois a porcentagem se faz referencia ao tamanho da rigth login que é seu container pai */
+  width: 60%;
+
+  display: flex;
+  /* alinhando verticalmente e horizontalmente os containers */
+  justify-content: center;
+  align-items: center;
+  /*adiciono o flex direction column para todos os itens dentro do container card login ficarem um embaixo do outro  */
+  flex-direction: column;
+  /* definindo largura dentro do container de 30px na vertical e 35 na horizontal */
+  padding: 30px 35px;
+
+  background-color: #2f2841;
+  /* definindo as curvas das extremidades do container */
+  border-radius: 20px;
+
+  box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login h1 {
+  color: #00ff88;
+  font-weight: 800;
+}
+
+.text-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.text-field > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  /* definindo que a div filho não poderá ultrapassar a div pai */
+  box-sizing: border-box;
+}
+
+.text-field > label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.text-field > input::placeholder {
+  color: #f0ffff94;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2b134b;
+  background-color: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+/* fim */
+
+/* Responsividade */
+@media only screen and (max-width: 950px) {
+  .card-login {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+  }
+ 
+  .left-login > h1 {
+    display: none;
+  }
+
+  .rigth-login{
+    width: 100%;
+    height: auto;
+  }
+  .left-login{
+    width: 100%;
+    height: auto;
+  }
+
+  .left-login-image {
+    width: 50vw;
+  }
+
+}
